@@ -1,0 +1,39 @@
+.navigationBar{
+    text-align: center;
+    background-color: #e8ede9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 60px;
+}
+
+.logoDiv{
+    width: 100px;
+    position: absolute;
+    top: 10px;
+    left: 30px;
+}
+
+.userInputDiv  input{
+    width: 50%;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-weight:600;
+    font-size: 16px;
+    padding-left: 5px;
+}
+
+.searchButton{
+    /* width: 50px; */
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid black;
+    text-align: center;
+    padding: 2px 15px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.searchButton i{
+    font-size: 18px;
+}

@@ -1,0 +1,27 @@
+.moreVideosSection{
+    /* background-color: green; */
+    height: 100px;
+    margin-bottom: 5px;
+}
+
+.imgDivAdjustment{
+    height: 90px;
+    padding: 0;
+    padding-right: 5px;
+
+}
+
+.contentDiv{
+    padding-left: 0;
+    font-size: 15px;
+    color: black;
+}
+
+.thumbnailTitle{
+    margin-bottom: 0;
+    font-weight: 600;
+}
+
+.channelName{
+    font-size: 12px;
+}

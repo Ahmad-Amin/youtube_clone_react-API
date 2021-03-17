@@ -1,0 +1,9 @@
+.mainVideoSection{
+    height: 500px;
+    margin-bottom: 10px;
+    padding-right: 10px;
+}
+
+.buttonDisplaySettings{
+    display: none;
+}
