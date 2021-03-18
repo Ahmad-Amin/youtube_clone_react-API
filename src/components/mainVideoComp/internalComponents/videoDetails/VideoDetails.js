@@ -31,7 +31,7 @@ const VideoDetails = ({video}) => {
     const videosrcLink = `https://www.youtube.com/embed/${video.id.videoId}`;
     
     return(
-        <div className="col-lg-9 col-md-9">
+        <div className="col-lg-9 col-md-12 col-sm-12 col-xs-12">
             <section className="mainVideoSection">
                 <iframe src={videosrcLink} allowFullScreen title='Video player' width="100%" height="100%"/>
             </section>

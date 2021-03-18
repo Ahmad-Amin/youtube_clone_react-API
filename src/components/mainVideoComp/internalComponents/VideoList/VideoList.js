@@ -1,26 +1,26 @@
 import React from 'react';
 import './videoList.css';
-import VideoList from '../VideoItem';
+import VideoItem from '../VideoItem';
 
-const VideoItem = (props) => {
+const VideoList = (props) => {
 
     const renderedVideos = props
         .videos
         .map((v) => {
             return (
                 <section key={v.etag} className="moreVideosSection">
-                    <VideoList 
+                    <VideoItem 
                         v={v}
-                        handleVideoSelect={props.handleVideoSelect}></VideoList>
+                        handleVideoSelect={props.handleVideoSelect}></VideoItem>
                 </section>
             );
         });
 
     return (
-        <div className="col-lg-3 col-md-3">
+        <div className="col-lg-3 col-md-12 col-sm-12">
             {renderedVideos}
         </div>
     );
 }
 
-export default VideoItem;
+export default VideoList;
