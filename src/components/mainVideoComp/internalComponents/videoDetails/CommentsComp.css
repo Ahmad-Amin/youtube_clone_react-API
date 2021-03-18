@@ -1,0 +1,38 @@
+.commentDiv ul {
+    list-style-type: none;
+}
+
+/* .commentDiv ul li{
+    position: relative;
+}
+
+.commentDiv ul li::before {
+    content: '';
+    width: 25px;
+    height: 25px;
+    background-color: red;
+    position: absolute;
+    left: -50px;
+    top: 0;
+} */
+
+.wholeContainList{
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.wholeContainList .commentImageDiv{
+    width: 35px;
+    height: 35px;
+    background-color: red;
+    position: absolute;
+    top: 0px;
+    left: -40px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.commentAuthorName{
+    font-family: 'Roboto';
+    font-size: 16px;
+}

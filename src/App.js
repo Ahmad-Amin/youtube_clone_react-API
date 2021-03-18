@@ -18,12 +18,13 @@ class App extends React.Component {
         })
 
         this.setState({videos: response.data.items});
-        console.log(this.state.videos);
+        // console.log(this.state.videos);
         
     }
 
     handleVideoSelect = (v) => {
         this.setState({selectedVideo: v});
+        window.scrollTo(0,0);
         // console.log(this.state.selectedVideo);
     }
 

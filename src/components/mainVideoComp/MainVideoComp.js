@@ -9,7 +9,9 @@ const MainVideoComp = (props) => {
         <section className='VideoSection'>
             <div className='row'>
                 <VideoDetails 
-                    video={props.selectedVideo}></VideoDetails>
+                    video={props.selectedVideo}
+                    videos={props.videos}
+                    ></VideoDetails>
                 <VideoList 
                     videos={props.videos}
                     handleVideoSelect={props.handleVideoSelect}></VideoList>

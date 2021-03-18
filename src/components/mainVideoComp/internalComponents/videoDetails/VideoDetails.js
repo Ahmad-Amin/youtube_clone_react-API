@@ -1,10 +1,9 @@
-import axios from 'axios';
 import React, {useState, useEffect} from 'react';
 import youtube from '../../../../apis/youtube';
 import './VideoDetails.css';
 import CommentsComp from './CommentsComp';
 
-const VideoDetails = ({video}) => {
+const VideoDetails = ({video, videos}) => {
     
     const [comments, setComments] = useState([]);
     const [showComment, setCommentVisisbility] = useState(false);
@@ -22,35 +21,35 @@ const VideoDetails = ({video}) => {
     useEffect(() => {
         setCommentVisisbility(false)
     },[video]);
-    
+
+
 
     if(!video){
-        return <div className='col-lg-9 col-md-9'>Loading...</div>
+        console.log(videos);
+        return <div className="col-lg-9 col-md-12 ">Loading ...</div>
     }
 
-    const videosrcLink = `https://www.youtube.com/embed/${video.id.videoId}`;
+    const videosrcLinkifSelected = `https://www.youtube.com/embed/${video.id.videoId}`;
     
     return(
         <div className="col-lg-9 col-md-12 col-sm-12 col-xs-12">
             <section className="mainVideoSection">
-                <iframe src={videosrcLink} allowFullScreen title='Video player' width="100%" height="100%"/>
+                <iframe src={videosrcLinkifSelected} allowFullScreen title='Video player' width="100%" height="100%"/>
             </section>
 
             <section className='mainVideoContent'>
-                <h2>{video.snippet.title}</h2>
-                <h5>{video.snippet.channelTitle}</h5>
-                <p>{video.snippet.description}</p>
+                <h2 className="mainVideoContent-title">{video.snippet.title}</h2>
+                <h5 className="mainVideoContent-channel">{video.snippet.channelTitle}</h5>
+                <p className="mainVideoContent-description">{video.snippet.description}</p>
             </section>
             
             <button 
-                className="btn btn-primary "
                 // eslint-disable-next-line react/jsx-no-duplicate-props
-                className={showComment ? 'buttonDisplaySettings' : null}
+                className={`btn btn-primary moreCommentsButton ${showComment ? 'buttonDisplaySettings' : null}`}
                 onClick={() => fetchData(video.id.videoId)}
-                
                 >Show Comments</button>
 
-            {showComment ? <CommentsComp comments={comments}></CommentsComp> : <div> No Comments</div>}
+            {showComment ? <CommentsComp comments={comments}></CommentsComp> : null}
 
         </div>
     );

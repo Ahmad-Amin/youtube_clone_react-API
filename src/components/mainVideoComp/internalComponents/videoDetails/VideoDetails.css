@@ -7,3 +7,37 @@
 .buttonDisplaySettings{
     display: none;
 }
+
+.moreCommentsButton{
+    cursor: pointer;
+    font-weight: 600;
+    /* color: white;
+    display: block; */
+}
+
+.mainVideoContent{
+    font-family: 'Roboto', sans-serif;
+}
+
+.mainVideoContent-title{
+    font-weight: 500;
+    font-size: 25px;
+}
+
+.mainVideoContent-channel{
+    font-size: 14px;
+    font-weight: 500;
+    /* background-color: #e8ede9; */
+    background-color:dimgrey;
+    color: white;
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 20px;
+}
+
+
+@media (max-width: 600px){
+    .moreCommentsButton{
+        display: none;
+    }
+}

@@ -5,7 +5,7 @@ import './SearchBar.css'
 class SearchBar extends Component {
 
     state={
-        query:'javascript'
+        query:''
     }
 
     // /AIzaSyB_omo8fxciuGj7Jzpt_78ZIHnR-48vEn4
